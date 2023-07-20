@@ -1,0 +1,20 @@
+spring:
+  #  Remove the next line when a server is configured for spring cloud
+  cloud.config.enabled: false
+
+  # Application Info
+  application:
+    name: greeting-service
+
+#Management Actuator Endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+
+# Greeting Environment Variables
+greeting-service:
+  greeting: "Hello"
+  default-value: "World"
